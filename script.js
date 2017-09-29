@@ -345,10 +345,6 @@ function markPrinted(storageKeys) {
         }
 }
 
-function setInstructions() {                            // set 'instructions' key in session storage
-    sessionStorage.setItem('instructions', 'hidden');
-}
-
 $('#printedbutton').click(function(fadeRewardIn) {      // This is a trick to mask #message2 div jittering
     $("#message2").fadeIn(800);
 });
@@ -365,6 +361,6 @@ $(document).ready(function fadeInstructions() {         // Fade instructions in 
 
 $("#X").click(function hideInstructions(){  // hide instructions when the 'X' is clicked
     $('#howto-box').hide();
-    setInstructions();                      // set 'instructions' key in session storage
+    sessionStorage.setItem('instructions', 'hidden');           // set 'instructions' key in session storage
 });
 
