@@ -1,0 +1,54 @@
+<!--
+Project by:  Misha Krul
+Started:     June 20th, 2017
+Completed:   September 3rd, 2017
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+	<title>CMYKrul | Internship</title>
+	<link rel='stylesheet' type='text/css' href='normalize.css' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</head>
+
+    <body onload='createCanvases();'>          <!-- canvases are created when body element loads -->
+    
+        <header>
+            <h1>Select print jobs by color</h1>
+            <h2>Misha Krul</h2>
+                <hr class = 'headlines'>
+                    <nav>
+                        <li>
+                            <a href='index.html'>Main</a>
+                        </li>
+                        <li>
+                            <a href='queue.html'>Queue</a>
+                        </li>
+                        <li>
+                            <a href='notes.html'>Notes</a>
+                        </li>
+                    </nav>
+                <hr class = 'headlines'>
+                <br>
+        </header>
+        
+            <div>
+                <button id='printedbutton' class='button' type='submit' onclick='markPrinted()'>Mark as printed</button>
+                    <a href='https://preview.c9users.io/mishakrul/cmykrul/index.html'>
+                <button id='backtomainbutton' class='button' type='button'>Back to Main</button>
+                    </a>
+            </div>
+            
+            <br>
+            <div id='message2'></div>
+            <br>
+            
+            <div id='queuefield' class='canvasfield'></div>
+            
+        <script src='script.js'></script>
+    </body>
+</html>

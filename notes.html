@@ -1,0 +1,100 @@
+<!--
+Project by:  Misha Krul
+Started:     June 20th, 2017
+Completed:   September 3rd, 2017
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>CMYKrul | Internship</title>
+	<link rel='stylesheet' type='text/css' href='normalize.css' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+
+    <body>
+        
+        <header>
+            <h1>Select print jobs by color</h1>
+            <h2>Misha Krul</h2>
+                <hr class = 'headlines'>
+                    <nav>
+                        <li>
+                            <a href='index.html'>Main</a>
+                        </li>
+                        <li>
+                            <a href='queue.html'>Queue</a>
+                        </li>
+                        <li>
+                            <a href='notes.html'>Notes</a>
+                        </li>
+                    </nav>
+        </header>
+        
+                <hr class = 'headlines'>
+                <br>
+                <div id='paragraphs'>
+                <h4>Notes:</h4>
+                    <p>
+                        Due to security risks, I am unable to draw an image from an outside domain into an 
+                        HTML canvas. I had originally wanted to draw images directly from the Spoonflower 
+                        website, but I was forced to use images residing inside my Cloud 9 workspace.
+                    </p>
+                    <p>
+                        Global variables should generally be avoided because they clutter 
+                        up global namespace, can cause naming collisions, and are slower 
+                        to 'find' than local variables. The solution for this was to wrap 
+                        globals inside of a unique namespace / object.
+                    </p>
+                    <p>
+                        When clearing the HTML canvas, ctx.clearRect(0, 0, canvas.width, 
+                        canvas.height); is more memory-efficient than canvas.width = 
+                        canvas.width. The first method clears the entire canvas state including 
+                        many of the canvas's attributes.  This method is also faster on most 
+                        browsers.
+                    </p>
+                    <p>
+                        Pressing the 'enter' key after entering data into an input field does 
+                        not yield the same result as physically clicking the submit button.  
+                        This behavior must be coded into the webpage manually.
+                    </p>
+                    <p>
+                        Rick suggested using local storage to store image data so that
+                        images could be 'sent' from one page to another.  This worked well 
+                        enough given the scope and purpose of the project, but overall 
+                        functionality could have been improved by using an actual database.
+                    </p>
+                    <p>
+                        During the earlier stages of development, I began work on the 'mobile' 
+                        and 'tablet' views first, which I tested using BrowserStack.  It was 
+                        during this testing phase when I discovered some styling inconsistencies 
+                        between platforms, such as radio buttons were breaking out of their container 
+                        divs on most mobile devices.  Amy recommended using a CSS clearfix, but 
+                        unfortunately that did not correct the problem.  I believe this is probably 
+                        an issue with the default styling of radio buttons on certain phones and tablets.
+                        I added normalize.css to try and 'equalize' the appearance of the 
+                        webpage(s) across all platforms, but this didn't help either.
+                        <br></br>
+                        I feel that a better solution for the radio button and input elements on 
+                        the mobile view would be to make them into "Price is right"-style scroll 
+                        wheels instead, but I was unable to find some good working examples of these 
+                        types of menus on the Internet.
+                    </p>
+                    <p>
+                        I attempted to include an easter egg when a user plays with the app 
+                        on October 31st, but encountered some unexpected issues with the program 
+                        not recognizing specific date formats properly.
+                    </p>
+                    <p>
+                        Ultimately, the program is not capable of sorting images by their RGB 
+                        values.  I attempted to use some existing libraries (such as 
+                        ColorThief and psColor) to get the program to sort images by RGB, but 
+                        present gaps in my knowledge are preventing me from using these Libraries 
+                        to achieve my goal.
+                    </p>
+                </div>
+        
+    </body>
+    
+</html>

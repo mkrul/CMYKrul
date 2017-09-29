@@ -1,0 +1,112 @@
+<!--
+Project by:  Misha Krul
+Started:     June 20th, 2017
+Completed:   September 3rd, 2017
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+	<title>CMYKrul | Internship</title>
+	<link rel='stylesheet' type='text/css' href='normalize.css' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+    <body onload='initialize();'>
+        
+        <header>
+            <h1>Select print jobs by color</h1>
+            <h2>Misha Krul</h2>
+                <hr class = 'headlines'>
+                    <nav>
+                        <li>
+                            <a href='index.html'>Main</a>
+                        </li>
+                        <li>
+                            <a href='queue.html'>Queue</a>
+                        </li>
+                        <li>
+                            <a href='notes.html'>Notes</a>
+                        </li>
+                    </nav>
+                <hr class = 'headlines'>
+                <br>
+        </header>
+        
+        
+    <div class='container'>
+        <div id='howto-box' class='fadeonload'>
+            <div id='X' class='fadeonload'>X</div>
+            <div id='howto-header' class='fadeonload'>Instructions:</div>
+            <div id='howto-list' class='fadeonload'>
+                1. Enter a number from 1 to 10<br>
+                2. Select a color<br>
+                3. Click 'Get Items'<br>
+                4. Click 'Send to Queue'<br>
+                5. Go to the Queue<br>
+                6. Mark items as printed
+            </div>
+        </div>
+        <div id='getitemsfield' class='canvasfield'></div>
+    </div>
+    
+    <br><div id='message1'></div>
+    
+        <div id='queueblock' style="clear:both">
+            <div>
+                <form action='#' method='get' name=queueform id=queue>
+                
+                        <!--  To select only ONE radio button at a time, all radio buttons in #colors-box must be   -->
+                        <!--  given the same NAME. To deselect radio buttons when #colors-tab is closed, all radios -->
+                        <!--  must be given the same CLASS.                                                         -->
+                        
+                            <div id='cell1' class='cell'>
+                                    <label for='items' id='items-box'>Items: </label>
+                                    <input id='items' size='2' type='text'>
+                                    <li>                                       
+                                        <input id='grybtn' class='radiobutton' type='radio' name='selection' value='gray'/> 
+                                        <label for='grybtn'>Gray</label>   
+                                    </li>                                                           
+                                    <li>
+                                        <input id='redbtn' class='radiobutton' type='radio' name='selection' value='red'/>
+                                        <label for='redbtn'>Red</label>
+                                    </li>
+                                    <li>
+                                        <input id='grnbtn' class='radiobutton' type='radio' name='selection' value='green'/>
+                                        <label for='grnbtn'>Green</label>
+                                    </li>
+                                    <li>
+                                        <input id='blkbtn' class='radiobutton' type='radio' name='selection' value='black'/>
+                                        <label for='blkbtn'>Black</label>
+                                    </li>
+                                    <li>
+                                        <input id='yelbtn' class='radiobutton' type='radio' name='selection' value='yellow'/>
+                                        <label for='yelbtn'>Yellow</label>
+                                    </li>
+                                    <li>
+                                        <input id='magbtn' class='radiobutton' type='radio' name='selection' value='magenta'/>
+                                        <label for='magbtn'>Magenta</label>
+                                    </li>
+                                    <li>
+                                        <input id='cynbtn' class='radiobutton' type='radio' name='selection' value='cyan'/>
+                                        <label for='cynbtn'>Cyan</label>
+                                    </li>
+                            </div>
+                            
+                            <div id='cell2' class='cell'>
+                                <button id='getitemsbutton' class='button' type='button' onclick='checkInput()'>Get Items</button>
+                                <button id='clearbutton' class='button' type='reset'>Clear</button>
+                                <button id='queueitemsbutton' class='button' type='submit' onclick='storeCanvasData()'>Send to Queue</button>
+                                    <a href='https://preview.c9users.io/mishakrul/cmykrul/queue.html'>
+                                <button id='gotoqueuebutton' class='button' type='button'>Go to Queue</button>
+                                </a>
+                            </div>
+                </form>
+            </div>
+        </div>
+        <script src='script.js'></script>
+    </body>
+</html>
