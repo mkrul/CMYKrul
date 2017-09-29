@@ -350,17 +350,17 @@ function setInstructions() {                            // set 'instructions' ke
 }
 
 $('#printedbutton').click(function(fadeRewardIn) {      // This is a trick to mask #message2 div jittering
-  $("#message2").fadeIn(800);
+    $("#message2").fadeIn(800);
 });
 
 $(document).ready(function fadeInstructions() {         // Fade instructions in on document load.
     if (sessionStorage.getItem('instructions')) {       // If a key called 'instructions' is in session
         // do nothing                                   //   storage, do not display user instructions.
     } else {
-    $(".fadeonload").hide(0).delay(200).fadeIn(900); {
-    // animation complete
+        $(".fadeonload").hide(0).delay(200).fadeIn(900); {
+        // animation complete
+        }
     }
-  }
 });
 
 $("#X").click(function hideInstructions(){  // hide instructions when the 'X' is clicked
